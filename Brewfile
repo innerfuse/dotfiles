@@ -92,6 +92,10 @@ cask "carbon-copy-cloner"
 cask "font-abel"
 cask "font-fjalla-one"
 cask "font-inter"
+cask "font-fira-code-nerd-font"
+cask "font-ibm-plex"
+cask "font-ibm-plex-mono"
+cask "font-blex-mono-nerd-font"
 # Monospaced variant of "San Francisco" by Apple
 cask "font-sf-mono"
 # Sans-serif signage typeface with a gentle character
@@ -108,6 +112,22 @@ cask "subler"
 cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
+cask "visual-studio-code-insiders"
+
+cask "google-cloud-sdk"
+
+cask "iterm2"
+
+# Browsers
+cask "microsoft-edge"
+cask "google-chrome"
+cask "firefox"
+cask "safari-technology-preview"
+
+# SetApp market place
+cask "setapp"
+
+# Apple App Store
 mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "Keynote", id: 409183694
@@ -115,5 +135,3 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "StopTheMadness", id: 1376402589
-mas "Vinegar", id: 1591303229
-mas "WhatsApp", id: 1147396723
