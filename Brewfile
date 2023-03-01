@@ -124,6 +124,10 @@ cask "google-chrome"
 cask "firefox"
 cask "safari-technology-preview"
 
+# Utilities
+cask "alfred"
+cask "contexts"
+
 # SetApp market place
 cask "setapp"
 
