@@ -88,10 +88,7 @@ cask "1password-cli"
 cask "appcleaner"
 # Hard disk backup and cloning utility
 cask "carbon-copy-cloner"
-# Elgato FACECAM configuration tool
-cask "elgato-camera-hub"
-# Control your Elgato Key Lights
-cask "elgato-control-center"
+# Fonts
 cask "font-abel"
 cask "font-fjalla-one"
 cask "font-inter"
@@ -99,43 +96,24 @@ cask "font-inter"
 cask "font-sf-mono"
 # Sans-serif signage typeface with a gentle character
 cask "font-signika"
-# GIT client
-cask "fork"
-# Utility to fix grammar errors and style issues in text
-cask "grammarly"
-# Tool to prevent the system from going into sleep mode
-cask "keepingyouawake"
 # Web browser
 cask "microsoft-edge"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Orchestration with Kubernetes on Apple
 cask "orka"
-# Automatically hides or quits apps after periods of inactivity
-cask "quitter"
-# Utility to resize and position application windows
-cask "sizeup"
 # Mux and tag mp4 files
 cask "subler"
 # Open-source BitTorrent client
 cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
-# Video communication and virtual meeting platform
-cask "zoom"
 mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
-mas "Airmail", id: 918858936
-mas "Cardhop", id: 1290358394
-mas "Fantastical", id: 975937182
 mas "Keynote", id: 409183694
-mas "Mactracker", id: 430255202
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pixelmator Pro", id: 1289583905
-mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
 mas "StopTheMadness", id: 1376402589
-mas "TouchDraw", id: 548887176
 mas "Vinegar", id: 1591303229
 mas "WhatsApp", id: 1147396723
