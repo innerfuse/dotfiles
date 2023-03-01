@@ -1,11 +1,12 @@
 [user]
 	# Name used in commit messages.
-	name = Mike McQuaid
+	name = Weyert de Boer
 	# Email used in commit messages.
-	email = mike@mikemcquaid.com
+	email = weyert@gmail.com
+	signingkey = D5B4860AF6A8ABD7
 [github]
 	# GitHub username for command-line tools.
-	user = MikeMcQuaid
+	user = innerfuse
 [color]
 	# Colour terminal command output when possible.
 	ui = auto
@@ -187,9 +188,9 @@
 	# insteadOf = https://github.com/
 [credential]
 	# Use my custom dotfiles credentials helper.
-	helper = dotfiles
+	helper = osxkeychain
 [credential "https://github.com"]
-	username = MikeMcQuaid
+	username = weyert
 [hub]
 	# Use HTTPS rather than SSH protocol in Hub
 	protocol = https
