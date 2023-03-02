@@ -118,7 +118,16 @@ cask "transmission"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
 
+# Development
 cask "google-cloud-sdk"
+cask "docker"
+cask "podman"
+
+# Design tools
+cask "affinity-photo"
+cask "affinity-designer"
+cask "affinity-publisher"
+cask "figma"
 
 cask "iterm2"
 
@@ -132,10 +141,15 @@ cask "safari-technology-preview"
 cask "alfred"
 cask "contexts"
 
+# Hobbies
+cask "yacreader"
+
 # SetApp market place
 cask "setapp"
 
 # Apple App Store
+mas "Xcode", id: 497799835
+mas "Receiver Radio", id: 1445434819
 mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "Keynote", id: 409183694
