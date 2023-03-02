@@ -80,6 +80,10 @@ brew "wget"
 brew "youtube-dl"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Pretty shell
+brew "starship"
+# ASDF tool management
+brew "asdf"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
