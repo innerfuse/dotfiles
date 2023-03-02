@@ -50,8 +50,6 @@ brew "launchdns"
 brew "mas"
 # Platform built on V8 to build network applications
 brew "node"
-# Manage multiple NodeJS versions
-brew "nodenv"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Optimizer for PNG files
@@ -88,8 +86,6 @@ brew "asdf"
 cask "1password"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
-# Application uninstaller
-cask "appcleaner"
 # Hard disk backup and cloning utility
 cask "carbon-copy-cloner"
 # Fonts
@@ -110,8 +106,6 @@ cask "microsoft-edge"
 cask "obs"
 # Orchestration with Kubernetes on Apple
 cask "orka"
-# Mux and tag mp4 files
-cask "subler"
 # Open-source BitTorrent client
 cask "transmission"
 # Open-source code editor
