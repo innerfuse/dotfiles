@@ -8,15 +8,16 @@ cd $(dirname $0)/..
   "Set 'Window Settings':Basic:shellExitAction 1"
 
 # Setup my home directory how I like it
-mkdir -pv ~/OSS ~/GitHub
+mkdir -pv ~/OSS ~/Development ~/Development/Projects/innerfuse
 ln -vsf "$(brew --repository)" ~/OSS/Homebrew
 ln -vsf "$(pwd -P)" ~/OSS/dotfiles
 
 script/install-vscode-extensions
+scrupt/setup-vscode-settings
 
 # Use ZSH as my default Shell
 if [ "$SHELL" != "/bin/zsh" ]; then
-  chsh -s /bin/zsh mike
+  chsh -s /bin/zsh wdeboer
 fi
 
 bin/touchid-enable-pam-sudo

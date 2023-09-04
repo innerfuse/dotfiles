@@ -162,11 +162,11 @@ if [[ -n "${MACOS}" ]]; then
   alias finder-hide="setfile -a V"
 
   # Load GITHUB_TOKEN from macOS keychain
-  export GITHUB_TOKEN=$(
-    printf "protocol=https\\nhost=github.com\\n" |
-      git credential fill |
-      perl -lne '/password=(gho_.+)/ && print "$1"'
-  )
+  # export GITHUB_TOKEN=$(
+  #   printf "protocol=https\\nhost=github.com\\n" |
+  #     git credential fill |
+  #     perl -lne '/password=(gho_.+)/ && print "$1"'
+  # )
   export HOMEBREW_GITHUB_API_TOKEN="${GITHUB_TOKEN}"
   export JEKYLL_GITHUB_TOKEN="${GITHUB_TOKEN}"
   export BUNDLE_RUBYGEMS__PKG__GITHUB__COM="${GITHUB_TOKEN}"
@@ -224,6 +224,15 @@ fi
 # Run dircolors if it exists
 quiet_which dircolors && eval "$(dircolors -b)"
 
+# Run volta setup, if it exists
+if quiet_which volta; then;
+  eval "$(volta setup)"
+  add_to_path_start "$VOLTA_HOME/bin"
+fi
+
+# Load the global secrets
+source $HOME/.secrets
+
 # Save directory changes
 cd() {
   builtin cd "$@" || return
@@ -258,9 +267,4 @@ trash() {
 # GitHub API shortcut
 github-api-curl() {
   noglob curl -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/$1"
-}
-
-# Spit out Okta keychain password
-okta-keychain() {
-  security find-generic-password -l device_trust '-w'
 }

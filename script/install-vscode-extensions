@@ -15,3 +15,19 @@ for EXTENSION in $(cat $(dirname $0)/../vscode-extensions); do
     code --install-extension "$EXTENSION"
   fi
 done
+
+# Install the VSCode extensions for the Insiders build
+if ! command -v code-insiders >/dev/null; then
+  echo "Install VS Code Insers first!" >&2
+  exit 1
+fi
+
+EXTENSIONS="$(code-insiders --list-extensions)"
+
+for EXTENSION in $(cat $(dirname $0)/../vscode-extensions); do
+  if echo "$EXTENSIONS" | grep -q "$EXTENSION"; then
+    echo "Extension '$EXTENSION' is already installed."
+  else
+    code-insiders --install-extension "$EXTENSION"
+  fi
+done

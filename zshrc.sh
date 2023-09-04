@@ -40,16 +40,30 @@ bindkey "^v" history-beginning-search-forward
 ZSH_AUTOSUGGESTIONS="$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 [ -f "$ZSH_AUTOSUGGESTIONS" ] && source "$ZSH_AUTOSUGGESTIONS"
 
+# enable starship integration for zsh
+which starship &>/dev/null && eval "$(starship init zsh)"
+
 # enable direnv (if installed)
 which direnv &>/dev/null && eval "$(direnv hook zsh)"
 
 # enable mcfly (if installed)
 which mcfly &>/dev/null && eval "$(mcfly init zsh)"
 
+# enable asdf (if installed)
+which asdf &>/dev/null && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+which asdf &>/dev/null && echo "asdf installed"
+
 # More colours with grc
 # shellcheck disable=SC1090
 GRC_ZSH="$HOMEBREW_PREFIX/etc/grc.zsh"
 [ -f "$GRC_ZSH" ] && source "$GRC_ZSH"
 
+# Disable autocorrection for some commonly used binaries
+alias npm='nocorrect npm'
+alias yarn='nocorrect yarn'
+# alias pnpm='nocorrect pnpm'
+
 # to avoid non-zero exit code
 true
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

@@ -115,7 +115,7 @@ cask "visual-studio-code-insiders"
 # Development
 cask "google-cloud-sdk"
 cask "docker"
-cask "podman"
+cask "podman-desktop"
 
 # Design tools
 cask "affinity-photo"

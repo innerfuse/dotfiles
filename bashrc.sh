@@ -1,5 +1,5 @@
-# check if this is a login shell
-[ "$0" = "-bash" ] && export LOGIN_BASH=1
+
+SH=1
 
 # run bash_profile if this is not a login shell
 [ -z "$LOGIN_BASH" ] && source ~/.bash_profile
@@ -26,3 +26,5 @@ GRC_SH="$HOMEBREW_PREFIX/etc/grc.sh"
 
 # to avoid non-zero exit code
 true
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

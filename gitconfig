@@ -32,7 +32,7 @@
 	enabled = true
 [core]
 	# Exclude everything this file. Used for general exclusions.
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/weyertdeboer/.gitignore
 	# Set attributes on files. Used for general diff improvements.
 	attributesfile = ~/.gitattributes
 	# Don't prompt for commit messages for merge commits.
@@ -191,6 +191,8 @@
 	helper = osxkeychain
 [credential "https://github.com"]
 	username = weyert
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [hub]
 	# Use HTTPS rather than SSH protocol in Hub
 	protocol = https
@@ -204,10 +206,11 @@
 	# Show the diff as a comment in the commit message template.
 	verbose = true
 	# Sign commits with GPG
-	gpgsign = true
+	gpgsign = false
+	template = /Users/weyertdeboer/.stCommitMsg
 [gpg]
 	# Use my custom dotfiles Codespaces GPG helper.
-	program = git-gpg-dotfiles
+	# program = git-gpg-dotfiles
 [tag]
 	# Sort tags by newest first
 	sort = -version:refname
@@ -229,3 +232,12 @@
 [checkout]
 	# If in doubt about the branch to checkout, pick origin.
 	defaultRemote = origin
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

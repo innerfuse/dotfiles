@@ -1,9 +1,9 @@
 Host *.github.com *.github.net *.githubapp.com
 	ForwardAgent no
-	User mikemcquaid
+	User weyert
 
 Host github-shell
-	User mikemcquaid
+	User weyert
 	HostName shell.service.ac4-iad.github.net
 	ProxyJump bastion.githubapp.com
 
@@ -16,8 +16,10 @@ Host *
 	StrictHostKeyChecking ask
 	VerifyHostKeyDNS ask
 	NoHostAuthenticationForLocalhost yes
-	IdentityFile ~/.ssh/id_ed25519
+	IdentityFile ~/.ssh/id_rsa_4096
 	IdentityFile ~/.ssh/id_rsa
+	IdentityFile ~/.ssh/id_rsa_kikkernet
+	IdentityFile ~/.ssh/id_tapico
 	UseKeychain yes
 	AddKeysToAgent yes
 	ControlMaster auto
