@@ -19,6 +19,13 @@ which direnv &>/dev/null && eval "$(direnv hook bash)"
 # enable mcfly (if installed)
 which mcfly &>/dev/null && eval "$(mcfly init bash)"
 
+export VOLTA_HOME=""
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# enable asdf (if installed)
+which asdf &>/dev/null && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+which asdf &>/dev/null && echo "asdf installed"
+
 # More colours with grc
 # shellcheck disable=SC1090
 GRC_SH="$HOMEBREW_PREFIX/etc/grc.sh"
@@ -26,5 +33,3 @@ GRC_SH="$HOMEBREW_PREFIX/etc/grc.sh"
 
 # to avoid non-zero exit code
 true
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"

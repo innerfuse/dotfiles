@@ -49,6 +49,10 @@ which direnv &>/dev/null && eval "$(direnv hook zsh)"
 # enable mcfly (if installed)
 which mcfly &>/dev/null && eval "$(mcfly init zsh)"
 
+# to avoid non-zero exit code
+export VOLTA_HOME=""
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 # enable asdf (if installed)
 which asdf &>/dev/null && . /opt/homebrew/opt/asdf/libexec/asdf.sh
 which asdf &>/dev/null && echo "asdf installed"
@@ -61,9 +65,6 @@ GRC_ZSH="$HOMEBREW_PREFIX/etc/grc.zsh"
 # Disable autocorrection for some commonly used binaries
 alias npm='nocorrect npm'
 alias yarn='nocorrect yarn'
-# alias pnpm='nocorrect pnpm'
+alias pnpm='nocorrect pnpm'
 
-# to avoid non-zero exit code
 true
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
